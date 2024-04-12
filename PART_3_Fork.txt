@@ -1,8 +1,8 @@
 Fork/Forking
-1. Membuat copy/duplikat dari repo orang lain (beserta historynya)
-2. Jembatan antara repo original dan duplikatnya
-3. Modifikasi terhadap repo original
-4. Berkontribusi pada repo orang lain
+1. Forking someone else's repository (including its history).
+2. Bridge between the original repository and its fork.
+3. Modifications to the original repository.
+4. Contributing to someone else's repository.
 5. Fork != Clone
 
 How to do Fork in github:
