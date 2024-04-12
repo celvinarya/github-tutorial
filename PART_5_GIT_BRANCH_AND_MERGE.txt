@@ -1,0 +1,30 @@
+#Create Branch on GIT
+1. Run 'git branch' to check all branch
+2. Run 'git branch lecture' to create new branch
+3. Run 'git branch student' to create new branch
+4. Run 'git log' check all history commit
+5. Run 'git log --all --decorate --oneline --graph' to visualize the branch
+6. Run 'alias graph="git log --all --decorate --oneline --graph"' to create alias in bash
+7. Execute 'graph'
+8. Run 'git branch' to check all branch
+9. Run 'git checkout <branch-name>' to switch branch
+
+--TASKS--
+1. create lecture.html on lecture branch
+2. create student.html on student branch
+--END--
+
+#Merge Branch on GIT
+Merge devided by 2 category:
+- Fast Forward: Occurs when the branch we want to merge is directly connected to the main pathway (direct path).
+    1. run 'git checkout master' to move to master branch
+    2. run 'git branch' to check all branch
+    3. run 'git merge lecture' to merge between master and lecture
+    4. run 'git branch --merged' to make sure the lecture branch has been merged to master
+    5. run 'git branch -d lecture' to delete the branch
+- Three-way merge/merge commit: The condition where the branch we want to merge is not directly connected to the main pathway.
+    1. run 'git checkout master' to move to master branch
+    2. run 'git branch' to check all branch
+    3. run 'git merge student' to merge between master and student
+    4. run 'git branch --merged' to make sure the student branch has been merged to master
+    5. run 'git branch -d student' to delete the branch

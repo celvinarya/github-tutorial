@@ -1,0 +1,78 @@
+GIT REMOTE
+1. Create new repository on Github(www.github.com) with name : git-test
+2. Downlaod the repository to the other directory. Run 'git clone https://github.com/celvinarya/git-test.git' for example.
+3. Open the folder. Run 'cd <directory-path>'
+4. Run 'git remote' to view the remote name
+5. Run 'git remote -v' to view the remote name in detail
+6. Run 'git status'
+7. Run 'alias graph="git log --all --decorate --oneline --graph"'
+
+USE CASE 1 - DOWNLAOD FROM REPOSITORY TO LOCAL
+0. Preparation
+Run 'git config --list'. Make you use the correct user.name and user.email
+To change the name and email :
+Run 'git config --local/--global user.name "Your name"
+Run 'git config --local/--global user.email "email@example.com"
+
+the --local parameter make the configuration will be apply on spesific repo (git-test)
+the --global parameter make the configuration will be apply on all repo
+
+1. Create index.html in git-test local computer
+2. Run 'git status'
+3. Run 'git add .'
+4. Run 'git commit -m "Add new file: index.html"
+5. Run 'git status'. If we check. the branch origin will not updated. the head -> master will be ahead of 'origin/master'. Then you need to push to the remote repository
+6. Run 'git push'. 
+    - Enter the username
+    - Enter the password
+7. Run 'git status'
+8. Make sure the result is:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+USE CASE 2 - UPLOAD FROM LOCAL AND CREATE NEW REPOSITORY IN GITHUB
+1. Create new folder in local computer : git-test-2
+2. Create and edit the index.html
+3. Run 'git add .'
+4. Run 'git commit -m "Initial Commit"'
+5. Run 'git status'
+6. Run 'alias graph="git log --all --decorate --oneline --graph"'
+7. Run 'graph'
+8. edit the index.html
+9. Run 'git add .'
+10. Run 'git commit -m "Update the index.html"
+11. Run 'git status'
+12. Go to the github web site (www.github.com)
+13. Create the new repository on Github website with the same name on local computer repository (git-test-2)
+14. Unchecklist the 'Initialize this repository with a README' option
+15. Open the GIT CLI local computer then run 'git remote' it should be empty
+16. Run 'git remote add origin https://github.com/celvinarya/git-test-2.git' to create remote. Check the result 'git remote -v'
+17. Run 'git branch -M master'
+18. Run 'git push -u origin master'
+19. Run 'git status'
+
+USE CASE 3 - CONFLICT 
+1. Create file 'style.css' in local computer
+2. Add 'body{font-family : arial;}'
+3. Create file 'style.css' in github
+4. Add 'body{font-family : georgia;}'
+5. Commit the file style.css in github
+6. Run 'git add . ' in local computer
+7. Run 'git commit -m "add new style.css file"'
+8. Run 'git push' on local computer. It should be return error [Rejected]
+9. Run 'git status' to check the commit status in local
+10. Run 'git fetch' to check remote repository state and download objects also the refs from another repository(remote repository)
+11. Run 'git status' to check the commit status in local. it should be updated
+12. Run 'graph'. it should be new branch created
+13. Run 'git pull' for resolve the merge CONFLICT
+14. Open the editor (should be automatically open). if no automatically open. you can open it manually with run 'nano style.css'
+15. Resolve the file
+16. Run 'git status'
+17. Run 'git add .'
+18. Run 'git commit -m "Change the style.css"'
+19. Run 'git status'
+20. Run 'git push'
+21. Run 'graph'
+22. Open the github website to check commit history

@@ -1,0 +1,27 @@
+--Use case merge conflict--
+1. Create new file "index.html" and edit
+2. Create new branch : 
+    - git branch dev
+3. Run 'git checkout dev' to move branch
+4. Add or edit the component on index.html file
+5. Run 'alias graph="git log --all --decorate --oneline --graph"'
+6. Run 'git add .'
+7. Run 'git commit -m "Update file"'
+8. Run 'graph'
+7. Run 'git checkout master' to move branch
+8. Change the component on index.html file and remove several component
+9. We can directly commit if the file only modified. Run 'git commit -am "Change the content index.html"'
+10. Merge the dev branch. Run 'git merge dev'. it should be return CONFLICT and the code editor will be automatically open, we should resolve the conflict manually
+11. After you edit the conflict. you should remove the git marker:
+<<<<<<<< HEAD(Current change)
+=====
+>>>>>>>> dev (Incoming change)
+12. Save the index.html file
+13. Run 'git add . '
+14. Run 'git commit -m "Merger branch dev"'
+15. Remove the branch 'git branch -d dev'
+16. Run 'git branch' to check all branch
+
+--Tips--
+1. We can checkout to the commit history and create new branch. Run 'git checkout <5/7 first digit>' then 'git branch <new_branch>
+2. If we got the detached problem. We should checkout to the branch. Run 'git checkout master'

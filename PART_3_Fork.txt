@@ -1,0 +1,22 @@
+Fork/Forking
+1. Membuat copy/duplikat dari repo orang lain (beserta historynya)
+2. Jembatan antara repo original dan duplikatnya
+3. Modifikasi terhadap repo original
+4. Berkontribusi pada repo orang lain
+5. Fork != Clone
+
+How to do Fork in github:
+1. Login to your account in Github
+2. Find the repository that you want to forked
+    - example : mongodb/mongo 
+3. Click "Fork"
+4. Click "Create Fork"
+5. Check your repository. You should have the forked repository
+6. Create new file ".vscode/settings.json" for testing the fork repository
+
+To do pull request to the owner repository. You can create pull request
+7. Click "contribute" 
+8. Click "open pull request"
+9. Click "Create pull request"
+
+The step is done, You might wait until the owner repository merge your pull request

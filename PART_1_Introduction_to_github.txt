@@ -1,0 +1,6 @@
+At this stage, we need to log in to the GitHub web page by accessing the following URL:
+
+www.github.com
+
+After that, create an account with a secure username and password. Then, create a repository of your choice. For example:
+github-tutorial

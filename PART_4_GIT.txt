@@ -1,0 +1,39 @@
+#Install the GIT application on windows
+1. Download the GIT from "https://git-scm.com/download/win"
+2. Install the GIT
+
+#Git Command
+git init: to initialize a git repository in our local area
+git add <file(s)>: to add file(s) to the staging area
+git status: to check the status of our repository, whether there are new, modified, or deleted files
+git commit: to make a commit
+git config: to configure settings
+git branch: to create a branch
+git help: to get more information about git command
+
+3 areas in a git repository:
+- Working tree: The folder where we work.
+- Staging area: The area where we inform git that we have made changes. ('git add' command will move the changes file to this stage)
+- History: The area after we make a commit (git commit).
+
+What we need to understand is that there are 2 areas: staging and history areas. Both of these areas are located inside the .git folder after we do 'git init'.
+
+#HANDS ON
+0. Config your git to github account
+    - run 'git config --global user.email "you@example.com"'
+    - run 'git config --global user.name "Your Name"
+1. Open GIT client
+2. Go to folder to create the repository
+3. run 'git init' to create repository
+4. run 'ls' to check the .git folder
+5. run 'git status' to check the file status in repo
+6. run 'git add <name-file>' or 'git add .' to add the file to stagging area
+--unstage--
+6.1 to remove or unstage the file you can run 'git rm --cached <name-file>'
+--end--
+7. run 'git commit -m "Initial commit"'
+8. run 'git status' to check the repo status
+9. run 'git log' to check all commit history (history area)
+10. run 'git log -3' to check last 3 commit history
+11. run 'git log -- <file name>' to check the commit history on spesific file
+12. run 'git checkout <5 first commit hash> -- <file-name>' to rollback the previous version

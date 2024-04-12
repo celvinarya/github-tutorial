@@ -1,0 +1,69 @@
+Branching
+When we use branching on github?
+1. Creating git Branching
+2. Creating a snapshot without disturbing the main pathway (Master/main branch)
+3. Creating feature development/non-production
+4. More than 1 person working on the same repository
+
+After we create a branch, we can perform a merge. Merge is returning from the branch to its master branch.
+
+How to branch in github
+1. Open www.github.com on your browser
+2. Create new file "test_feature.txt" with description "This feature is only running for development. Need to be tested"
+3. Commit and fill the commit description
+    - Create new file test_feature.txt
+    - Create a new branch "patch-1"
+4. Back to the repo <code> and check the branch
+5. Edit the "test_feature.txt" and input "A new row, a new role"
+6. Commit to branch "patch-1"
+7. Check the hist
+
+How to merge in github
+1. Click 'pull request'
+2. Look the 'Open a pull request' section
+    - base: main > compare : patch-1. Make sure its "Able to merge"
+3. Fill add a title column: "add file test_feature.txt and add new row in this file"
+4. Click 'Create pull request'
+5. Go to 'pull request' option on navbar repository
+6. Click 'merge pull request'
+7. Click 'confirm merge'
+
+After you successfully merge the branch, you can delete the branch (patch-1)
+8. Open the <code>
+9. Click "Branches"
+10. Delete the 'patch-1' branch
+
+Use case conflict merge
+1. Create new branch "dev-feature-1". Make sure it branching from main branch (from : master)
+2. Create new branch "dev-feature-2". Make sure it branching from main branch (from : master)
+3. Edit the test_feature.txt in dev-feature-1 branch
+    - Add new row: "New row from dev-feature-1" on last line
+    - Add new row: "This is the title" on first line
+    - Add new row: "Hello from the other side" on middle line
+4. Commit the test_feature.txt
+3. Edit the test_feature.txt in dev-feature-2 branch
+    - Add new row: "New row from dev-feature-2" on last line
+    - Delete the row: "A new row, a new role"
+    - Add new row: "This is the title dev-feature-2" on first line
+    - Add new row: "Hello from the other side" on middle line
+4. Commit the test_feature.txt
+5. Click the "Compare & pull request" for dev-feature-1
+6. Look the 'Open a pull request' section
+    - base: main > compare : patch-1. Make sure its "Able to merge"
+7. Click 'Create pull request'
+8. Go to 'pull request' option on navbar repository
+9. Click 'merge pull request'
+10. Click 'confirm merge'
+11. Go to code
+12. Click the "Compare & pull request" for dev-feature-2
+--CONFLICT MERGE--
+13. Look the 'Open a pull request' section
+    - base: main > compare : patch-1. It should be "Can’t automatically merge"
+--------END-------
+14. Click 'Create pull request'
+15. Go to 'pull request' option on navbar repository
+16. Click "Resolve conflicts"
+17. Edit the test_feature.txt conflicts file. Then 'Marks as resolved'
+18. Click 'merge pull request'
+19. Click 'confirm merge'
+20. You can delete the non-main branch
